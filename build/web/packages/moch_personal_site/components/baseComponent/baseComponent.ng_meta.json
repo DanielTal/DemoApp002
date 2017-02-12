@@ -1,0 +1,32 @@
+{
+  "ngDeps": {
+    "1": "",
+    "3": [
+      {
+        "1": "package:angular2/core.dart",
+        "5": false
+      },
+      {
+        "1": "dart:convert",
+        "5": false
+      }
+    ],
+    "6": "baseComponent.dart",
+    "7": [
+      {
+        "1": "package:angular2/core.template.dart",
+        "4": "i0"
+      }
+    ]
+  },
+  "type": {
+    "BaseComponent": {
+      "class": "Identifier",
+      "name": "BaseComponent",
+      "moduleUrl": "asset:moch_personal_site/lib/components/baseComponent/baseComponent.dart",
+      "prefix": null,
+      "value": null
+    }
+  },
+  "alias": {}
+}

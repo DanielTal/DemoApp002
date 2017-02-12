@@ -1,0 +1,13 @@
+{
+  "ngDeps": null,
+  "type": {
+    "EntitlementCalculationPrice": {
+      "class": "Identifier",
+      "name": "EntitlementCalculationPrice",
+      "moduleUrl": "asset:moch_personal_site/lib/models/EntitlementCalculationPrice.dart",
+      "prefix": null,
+      "value": null
+    }
+  },
+  "alias": {}
+}

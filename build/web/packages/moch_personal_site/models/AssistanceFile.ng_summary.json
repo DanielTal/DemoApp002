@@ -1,0 +1,13 @@
+{
+  "ngDeps": null,
+  "type": {
+    "AssistanceFile": {
+      "class": "Identifier",
+      "name": "AssistanceFile",
+      "moduleUrl": "asset:moch_personal_site/lib/models/AssistanceFile.dart",
+      "prefix": null,
+      "value": null
+    }
+  },
+  "alias": {}
+}

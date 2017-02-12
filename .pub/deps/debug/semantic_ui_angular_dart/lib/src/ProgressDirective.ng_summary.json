@@ -1,0 +1,90 @@
+{
+  "ngDeps": {
+    "1": "",
+    "3": [
+      {
+        "1": "package:angular2/core.dart",
+        "5": false
+      },
+      {
+        "1": "package:semantic_ui_angular_dart/src/Progress.dart",
+        "5": false
+      }
+    ],
+    "5": [
+      {
+        "1": "ProgressDirective",
+        "5": [
+          {
+            "1": "ElementRef",
+            "4": "element"
+          }
+        ],
+        "6": [
+          "AfterContentInit"
+        ]
+      }
+    ],
+    "6": "ProgressDirective.dart"
+  },
+  "type": {
+    "ProgressDirective": {
+      "class": "Directive",
+      "isComponent": false,
+      "selector": "[semantic_ui_progress]",
+      "exportAs": null,
+      "type": {
+        "class": "Type",
+        "name": "ProgressDirective",
+        "moduleUrl": "asset:semantic_ui_angular_dart/lib/src/ProgressDirective.dart",
+        "prefix": null,
+        "isHost": false,
+        "value": null,
+        "diDeps": [
+          {
+            "token": {
+              "value": null,
+              "identifier": {
+                "class": "Identifier",
+                "name": "ElementRef",
+                "moduleUrl": null,
+                "prefix": null,
+                "value": null
+              },
+              "identifierIsInstance": false
+            },
+            "value": null,
+            "isAttribute": false,
+            "isSelf": false,
+            "isHost": false,
+            "isSkipSelf": false,
+            "isOptional": false,
+            "isValue": false
+          }
+        ]
+      },
+      "changeDetection": 6,
+      "inputs": {
+        "percent": "percent"
+      },
+      "inputTypes": {
+        "percent": " double"
+      },
+      "outputs": {
+        "eventEmitter": "semantic_ui_progress"
+      },
+      "hostListeners": {},
+      "hostProperties": {},
+      "hostAttributes": {},
+      "lifecycleHooks": [
+        4
+      ],
+      "template": null,
+      "providers": [],
+      "viewProviders": [],
+      "queries": [],
+      "viewQueries": []
+    }
+  },
+  "alias": {}
+}

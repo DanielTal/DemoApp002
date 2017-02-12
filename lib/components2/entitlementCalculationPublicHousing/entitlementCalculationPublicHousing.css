@@ -1,0 +1,28 @@
+div.div1
+{
+    background-color: #ffffff;
+    height: 56px;
+}
+
+div.div2
+{
+    display:flex;
+    background-color: #F2F2F2;
+    height: 56px;
+    padding: 0 !important;
+    margin: 0 !important;    
+}
+
+div.div3
+{
+    background-color: #79ABD4;    
+    height: 56px;
+    font-size: 1px;
+    width:11px;
+}
+div.div4
+{
+    height: 56px;
+    flex-grow: 1;
+    text-align: center;
+}

@@ -1,0 +1,13 @@
+{
+  "ngDeps": null,
+  "type": {
+    "Payment": {
+      "class": "Identifier",
+      "name": "Payment",
+      "moduleUrl": "asset:moch_personal_site/lib/models/Payment.dart",
+      "prefix": null,
+      "value": null
+    }
+  },
+  "alias": {}
+}

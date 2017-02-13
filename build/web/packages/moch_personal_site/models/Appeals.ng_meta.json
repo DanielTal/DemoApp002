@@ -1,0 +1,13 @@
+{
+  "ngDeps": null,
+  "type": {
+    "Appeal": {
+      "class": "Identifier",
+      "name": "Appeal",
+      "moduleUrl": "asset:moch_personal_site/lib/models/Appeals.dart",
+      "prefix": null,
+      "value": null
+    }
+  },
+  "alias": {}
+}

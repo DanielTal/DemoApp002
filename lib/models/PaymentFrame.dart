@@ -4,7 +4,7 @@ class PaymentFrame
   DateTime EndDate;
   String Description;
   double Sum;
-  PaymentFrame()
+  PaymentFrame(jsonMap)
   {
 
   }

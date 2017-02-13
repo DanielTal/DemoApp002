@@ -5,7 +5,7 @@ class EntitlementCalculationRent
   String StatusName;
   DateTime ExpirationDate;
   String Settlements;
-  EntitlementCalculationRent()
+  EntitlementCalculationRent(jsonMap)
   {
     
   }

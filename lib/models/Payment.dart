@@ -5,7 +5,7 @@ class Payment
   String PaymentMethod;
   String BankAccountDetials;
   
-  Payment()
+  Payment(jsonMap)
   {
 
   }

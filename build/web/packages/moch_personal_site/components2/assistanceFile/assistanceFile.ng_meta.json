@@ -5,11 +5,29 @@
       {
         "1": "package:angular2/core.dart",
         "5": false
+      },
+      {
+        "1": "package:moch_personal_site/services/DataServices.dart",
+        "5": false
+      },
+      {
+        "1": "dart:async",
+        "5": false
+      },
+      {
+        "1": "package:moch_personal_site/models/AssistanceFile.dart",
+        "5": false
       }
     ],
     "5": [
       {
         "1": "AssistanceFileComponent",
+        "5": [
+          {
+            "1": "DataServices",
+            "4": "_dataServices"
+          }
+        ],
         "6": [
           "OnInit"
         ]
@@ -20,6 +38,14 @@
       {
         "1": "package:angular2/core.template.dart",
         "4": "i0"
+      },
+      {
+        "1": "package:moch_personal_site/services/DataServices.template.dart",
+        "4": "i1"
+      },
+      {
+        "1": "package:moch_personal_site/models/AssistanceFile.template.dart",
+        "4": "i2"
       }
     ]
   },
@@ -36,7 +62,28 @@
         "prefix": null,
         "isHost": false,
         "value": null,
-        "diDeps": []
+        "diDeps": [
+          {
+            "token": {
+              "value": null,
+              "identifier": {
+                "class": "Identifier",
+                "name": "DataServices",
+                "moduleUrl": "asset:moch_personal_site/lib/services/DataServices.dart",
+                "prefix": null,
+                "value": null
+              },
+              "identifierIsInstance": false
+            },
+            "value": null,
+            "isAttribute": false,
+            "isSelf": false,
+            "isHost": false,
+            "isSkipSelf": false,
+            "isOptional": false,
+            "isValue": false
+          }
+        ]
       },
       "changeDetection": 6,
       "inputs": {},
@@ -50,7 +97,7 @@
       ],
       "template": {
         "encapsulation": 0,
-        "template": "<div class=\"row\">\r\n    <div class=\"col-md-9 col-xs-9 div1\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-1 col-xs-1\"></div>\r\n            <div class=\"col-md-2 col-xs-2 div3\">\r\n                <img src=\"web3/images/caringAuthoritySourceName.png\"/>\r\n                <div>גורם מטפל</div>\r\n            </div>\r\n            <div class=\"col-md-2 col-xs-2 div3\">\r\n                <img src=\"web3/images/phoneNumbers.png\"/>\r\n                <div>טלפונים</div>\r\n            </div>\r\n            <div class=\"col-md-2 col-xs-2 div3\">\r\n                <img src=\"web3/images/email.png\"/>\r\n                <div>דואר אלקטרוני</div>\r\n            </div>\r\n            <div class=\"col-md-2 col-xs-2 div3\">\r\n                <img src=\"web3/images/address.png\"/>\r\n                <div>כתובת</div>\r\n            </div>\r\n            <div class=\"col-md-2 col-xs-2 div3\">\r\n                <img src=\"web3/images/maritalStatus.png\"/>\r\n                <div>מצב משפחתי</div>\r\n            </div>\r\n            <div class=\"col-md-1 col-xs-1\"></div>\r\n        </div>\r\n    </div>\r\n    <div class=\"col-md-3 col-xs-3 div2\">פרטי פונים</div>\r\n</div>\r\n",
+        "template": "<div class=\"row\">\r\n    <div class=\"col-md-9 col-xs-9 div1\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-1 col-xs-1\"></div>\r\n            <div class=\"col-md-2 col-xs-2 div3\">\r\n                <img src=\"web3/images/caringAuthoritySourceName.png\"/>\r\n                <div>גורם מטפל</div>\r\n                <div>{{model?.CaringAuthoritySourceName}}</div>\r\n            </div>\r\n            <div class=\"col-md-2 col-xs-2 div3\">\r\n                <img src=\"web3/images/phoneNumbers.png\"/>\r\n                <div>טלפונים</div>\r\n                <div>{{model?.Phone1Number}}</div>\r\n                <div>{{model?.Phone2Number}}</div>\r\n            </div>\r\n            <div class=\"col-md-2 col-xs-2 div3\">\r\n                <img src=\"web3/images/email.png\"/>\r\n                <div>{{model?.Email}}</div>\r\n            </div>\r\n            <div class=\"col-md-2 col-xs-2 div3\">\r\n                <img src=\"web3/images/address.png\"/>\r\n                <div>כתובת</div>\r\n                <div>{{model?.Address}}</div>\r\n            </div>\r\n            <div class=\"col-md-2 col-xs-2 div3\">\r\n                <img src=\"web3/images/maritalStatus.png\"/>\r\n                <div>מצב משפחתי</div>\r\n                <div>{{model?.MaritalStatus}}</div>\r\n            </div>\r\n            <div class=\"col-md-1 col-xs-1\"></div>\r\n        </div>\r\n    </div>\r\n    <div class=\"col-md-3 col-xs-3 div2\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-12 col-xs-12\">\r\n                <span class=\"label1\">תיק מס.</span>\r\n                <span class=\"label1\">{{model?.Id}}</span>\r\n            </div>\r\n        </div>\r\n        <div class=\"row\">\r\n            <div class=\"col-md-12 col-xs-12\">\r\n                <span class=\"label1\">פונה 1</span>\r\n                <span class=\"label1\">{{model?.Applicant1Name}}</span>\r\n            </div>\r\n        </div>\r\n        <div class=\"row\">\r\n            <div class=\"col-md-12 col-xs-12\">\r\n                <span>ת.ז</span>\r\n                <span>{{model?.Applicant1IdentityNumber}}</span>\r\n            </div>\r\n        </div>\r\n        <div class=\"row\">\r\n            <div class=\"col-md-12 col-xs-12\">\r\n                <span class=\"label1\">פונה 2</span>\r\n                <span class=\"label1\">{{model?.Applicant2Name}}</span>\r\n            </div>\r\n        </div>\r\n        <div class=\"row\">\r\n            <div class=\"col-md-12 col-xs-12\">\r\n                <span>ת.ז</span>\r\n                <span>{{model?.Applicant2IdentityNumber}}</span>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n",
         "templateUrl": "asset:moch_personal_site/lib/components2/assistanceFile/assistanceFile.html",
         "styles": [],
         "styleUrls": [

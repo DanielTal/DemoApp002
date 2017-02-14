@@ -14,7 +14,6 @@ import 'package:moch_personal_site/models/Document.dart';
 class DocumentsComponent implements OnInit, OnChanges
 {
   String Name;
-  @Input() String TZ;
   List<Document> documents;
 
   DocumentsComponent()

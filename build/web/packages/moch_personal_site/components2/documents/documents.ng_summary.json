@@ -46,12 +46,8 @@
         "diDeps": []
       },
       "changeDetection": 6,
-      "inputs": {
-        "TZ": "TZ"
-      },
-      "inputTypes": {
-        "TZ": " String"
-      },
+      "inputs": {},
+      "inputTypes": {},
       "outputs": {},
       "hostListeners": {},
       "hostProperties": {},

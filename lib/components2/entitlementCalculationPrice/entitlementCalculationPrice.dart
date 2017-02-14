@@ -1,4 +1,5 @@
 import 'package:angular2/core.dart';
+import 'package:moch_personal_site/services/DataServices.dart';
 
 @Component
 (
@@ -17,5 +18,14 @@ class EntitlementCalculationPriceComponent implements OnInit
   void ngOnInit()
   {
     Name = 'זכאות למחיר מפוקח';
+    DataServices.eventBus.on(Message).listen(OnData);
   }
+
+  void OnData(Message m)
+  {
+    print('EntitlementCalculationPriceComponent::OnData m = ${m.EventArg1}');
+    print('EntitlementCalculationPriceComponent::OnData m = ${m.eventType}');
+    print('EntitlementCalculationPriceComponent::OnData m = ${m.MessageText}');
+    print('EntitlementCalculationPriceComponent::OnData m = ${m.messageType}');
+  }  
 }

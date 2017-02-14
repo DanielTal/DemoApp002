@@ -1,8 +1,10 @@
 class EntitlementCalculationPrice
 {
-  String Description;
+  String EntitlementForTargetPrice;
+  String EntitlementForPricing;
+  String StatusName;
   DateTime ExpirationDate;
-  DateTime RenovationDate;
+  String Settlements;
 
   EntitlementCalculationPrice(jsonMap)
   {

@@ -5,11 +5,29 @@
       {
         "1": "package:angular2/core.dart",
         "5": false
+      },
+      {
+        "1": "package:moch_personal_site/services/DataServices.dart",
+        "5": false
+      },
+      {
+        "1": "package:moch_personal_site/models/EntitlementCalculationRent.dart",
+        "5": false
+      },
+      {
+        "1": "dart:async",
+        "5": false
       }
     ],
     "5": [
       {
         "1": "EntitlementCalculationRentComponent",
+        "5": [
+          {
+            "1": "DataServices",
+            "4": "_dataServices"
+          }
+        ],
         "6": [
           "OnInit"
         ]
@@ -30,7 +48,28 @@
         "prefix": null,
         "isHost": false,
         "value": null,
-        "diDeps": []
+        "diDeps": [
+          {
+            "token": {
+              "value": null,
+              "identifier": {
+                "class": "Identifier",
+                "name": "DataServices",
+                "moduleUrl": null,
+                "prefix": null,
+                "value": null
+              },
+              "identifierIsInstance": false
+            },
+            "value": null,
+            "isAttribute": false,
+            "isSelf": false,
+            "isHost": false,
+            "isSkipSelf": false,
+            "isOptional": false,
+            "isValue": false
+          }
+        ]
       },
       "changeDetection": 6,
       "inputs": {},
@@ -44,7 +83,7 @@
       ],
       "template": {
         "encapsulation": 0,
-        "template": "<div class=\"row\">\r\n    <div class=\"col-md-9 div1\">פרטי זכאות</div>\r\n    <div class=\"col-md-3 div2 nopadding\">\r\n        <div class=\"div3\">.</div>\r\n        <div class=\"div4\">\r\n            <h3>{{Name}}</h3>\r\n        </div>\r\n    </div>\r\n</div>",
+        "template": "<div class=\"row\">\r\n    <div class=\"col-md-9 div1\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-4 col-xs-4\">\r\n                <div>תאריך מוצע לפניה לחידוש הזכאות</div>\r\n                <div>{{model?.RenovationDate}}</div>\r\n            </div>\r\n            <div class=\"col-md-4 col-xs-4\">\r\n                <div>תאריך סיום תוקף הזכאות</div>\r\n                <div>{{model?.ExpirationDate}}</div>\r\n            </div>\r\n            <div class=\"col-md-4 col-xs-4\">\r\n                <div>תיאור הזכאות</div>\r\n                <div>{{model?.Description}}</div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n    <div class=\"col-md-3 div2 nopadding\">\r\n        <div class=\"div3\">.</div>\r\n        <div class=\"div4\">\r\n            <h3>{{Name}}</h3>\r\n        </div>\r\n    </div>\r\n</div>",
         "templateUrl": "asset:moch_personal_site/lib/components2/entitlementCalculationRent/entitlementCalculationRent.html",
         "styles": [],
         "styleUrls": [

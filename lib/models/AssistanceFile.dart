@@ -14,18 +14,18 @@ class AssistanceFile
 
   AssistanceFile(jsonMap)
   {
-      this.Applicant1Name = jsonMap['FirstEntity']['FirstName'] + ' ' + jsonMap['FirstEntity']['LastName'];
-      this.Applicant2Name = jsonMap['SecondEntity']['FirstName'] + ' ' + jsonMap['SecondEntity']['LastName'];
-      this.Applicant1IdentityNumber = jsonMap['FirstEntity']['IdentityNumber'];
-      this.Applicant2IdentityNumber = jsonMap['SecondEntity']['IdentityNumber'];
+      this.Applicant1Name = jsonMap['FirstApplicant']['FirstName'] + ' ' + jsonMap['FirstApplicant']['LastName'];
+      this.Applicant2Name = jsonMap['SecondApplicant']['FirstName'] + ' ' + jsonMap['SecondApplicant']['LastName'];
+      this.Applicant1IdentityNumber = jsonMap['FirstApplicant']['IdentityNumber'];
+      this.Applicant2IdentityNumber = jsonMap['SecondApplicant']['IdentityNumber'];
       this.MaritalStatus = jsonMap['MaritalStatus'];
-      this.Address = jsonMap['ResidenceAddress'];
-      // this.Email = jsonMap["Email"];
-      this.Phone1Number = jsonMap['FirstEntity']['MobileNumber'];
-      this.Phone2Number = jsonMap['SecondEntity']['MobileNumber'];
-      this.CaringAuthoritySourceName = jsonMap['CaringAuthoritySourceDescripion'];
-      //this.Id = model["Id"];
-      //"CreateDate":"0001-01-01T00:00:00","UpdateDate":"0001-01-01T00:00:00","CreatedUserId":0,"UpdatedUserId":0},"Succeeded":false,"Message":""}
+      this.Address = jsonMap['Address'];
+      this.Email = jsonMap['Email'];
+      this.Phone1Number = jsonMap['FirstApplicant']['PhoneNumber'];
+      this.Phone2Number = jsonMap['SecondApplicant']['PhoneNumber'];
+      this.CaringAuthoritySourceName = jsonMap['CaringAuthoritySourceName'];
+      this.Id = jsonMap['Id'];
+      // //"CreateDate":"0001-01-01T00:00:00","UpdateDate":"0001-01-01T00:00:00","CreatedUserId":0,"UpdatedUserId":0},"Succeeded":false,"Message":""}
   }
 }
 //int _toInt(id) => id is int ? id : int.parse(id);

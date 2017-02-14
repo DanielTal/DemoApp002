@@ -5,6 +5,10 @@
       {
         "1": "package:angular2/core.dart",
         "5": false
+      },
+      {
+        "1": "package:moch_personal_site/services/DataServices.dart",
+        "5": false
       }
     ],
     "5": [

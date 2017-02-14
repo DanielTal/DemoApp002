@@ -5,11 +5,21 @@
       {
         "1": "package:angular2/core.dart",
         "5": false
+      },
+      {
+        "1": "package:moch_personal_site/services/DataServices.dart",
+        "5": false
       }
     ],
     "5": [
       {
         "1": "DeclerationsComponent",
+        "5": [
+          {
+            "1": "DataServices",
+            "4": "_dataServices"
+          }
+        ],
         "6": [
           "OnInit"
         ]
@@ -30,7 +40,28 @@
         "prefix": null,
         "isHost": false,
         "value": null,
-        "diDeps": []
+        "diDeps": [
+          {
+            "token": {
+              "value": null,
+              "identifier": {
+                "class": "Identifier",
+                "name": "DataServices",
+                "moduleUrl": null,
+                "prefix": null,
+                "value": null
+              },
+              "identifierIsInstance": false
+            },
+            "value": null,
+            "isAttribute": false,
+            "isSelf": false,
+            "isHost": false,
+            "isSkipSelf": false,
+            "isOptional": false,
+            "isValue": false
+          }
+        ]
       },
       "changeDetection": 6,
       "inputs": {},

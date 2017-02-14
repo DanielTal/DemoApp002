@@ -1,12 +1,13 @@
 class EntitlementCalculationRent
 {
-  String EntitlementForTargetPrice;
-  String EntitlementForPricing;
-  String StatusName;
+  String Description;
   DateTime ExpirationDate;
-  String Settlements;
+  DateTime RenovationDate;
+
   EntitlementCalculationRent(jsonMap)
   {
-    
+    Description = jsonMap['Description'];
+    ExpirationDate = jsonMap['ExpirationDate'];
+    RenovationDate = jsonMap['RenovationDate'];
   }
 }

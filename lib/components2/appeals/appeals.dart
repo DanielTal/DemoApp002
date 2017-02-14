@@ -1,4 +1,5 @@
 import 'package:angular2/core.dart';
+import 'package:moch_personal_site/services/DataServices.dart';
 
 @Component
 (
@@ -17,5 +18,14 @@ class AppealsComponent implements OnInit
   void ngOnInit()
   {
     Name = 'רשימת פניות לוועדת ערער';
+    DataServices.eventBus.on(Message).listen(OnData);
+  }
+
+  void OnData(Message m)
+  {
+    print('AppealsComponent::OnData m = ${m.EventArg1}');
+    print('AppealsComponent::OnData m = ${m.eventType}');
+    print('AppealsComponent::OnData m = ${m.MessageText}');
+    print('AppealsComponent::OnData m = ${m.messageType}');
   }
 }

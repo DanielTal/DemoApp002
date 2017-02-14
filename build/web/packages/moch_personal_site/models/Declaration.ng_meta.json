@@ -1,0 +1,13 @@
+{
+  "ngDeps": null,
+  "type": {
+    "Declaration": {
+      "class": "Identifier",
+      "name": "Declaration",
+      "moduleUrl": "asset:moch_personal_site/lib/models/Declaration.dart",
+      "prefix": null,
+      "value": null
+    }
+  },
+  "alias": {}
+}

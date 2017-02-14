@@ -1,0 +1,67 @@
+{
+  "ngDeps": {
+    "1": "",
+    "3": [
+      {
+        "1": "package:angular2/core.dart",
+        "5": false
+      },
+      {
+        "1": "dart:async",
+        "5": false
+      }
+    ],
+    "5": [
+      {
+        "1": "FindByIdentityNumberComponent"
+      }
+    ],
+    "6": "findByIdentityNumber.dart",
+    "7": [
+      {
+        "1": "package:angular2/core.template.dart",
+        "4": "i0"
+      }
+    ]
+  },
+  "type": {
+    "FindByIdentityNumberComponent": {
+      "class": "Directive",
+      "isComponent": true,
+      "selector": "my-find-by-identity-number",
+      "exportAs": null,
+      "type": {
+        "class": "Type",
+        "name": "FindByIdentityNumberComponent",
+        "moduleUrl": "asset:moch_personal_site/lib/components/findByIdentityNumber/findByIdentityNumber.dart",
+        "prefix": null,
+        "isHost": false,
+        "value": null,
+        "diDeps": []
+      },
+      "changeDetection": 6,
+      "inputs": {},
+      "inputTypes": {},
+      "outputs": {
+        "TZChanged": "TZChanged"
+      },
+      "hostListeners": {},
+      "hostProperties": {},
+      "hostAttributes": {},
+      "lifecycleHooks": [],
+      "template": {
+        "encapsulation": 2,
+        "template": "<div class=\"row dataAreaContainer\">\r\n    <input [(ngModel)]=\"TZ1\" type=\"text\"/>\r\n    <button (click)=\"Go($event)\">אתר</button>\r\n</div>",
+        "templateUrl": "asset:moch_personal_site/lib/components/findByIdentityNumber/findByIdentityNumber.html",
+        "styles": [],
+        "styleUrls": [],
+        "ngContentSelectors": []
+      },
+      "providers": [],
+      "viewProviders": [],
+      "queries": [],
+      "viewQueries": []
+    }
+  },
+  "alias": {}
+}

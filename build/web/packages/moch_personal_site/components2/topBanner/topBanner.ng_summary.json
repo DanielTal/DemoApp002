@@ -1,0 +1,62 @@
+{
+  "ngDeps": {
+    "1": "",
+    "3": [
+      {
+        "1": "package:angular2/core.dart",
+        "5": false
+      }
+    ],
+    "5": [
+      {
+        "1": "TopBannerComponent",
+        "6": [
+          "OnInit"
+        ]
+      }
+    ],
+    "6": "topBanner.dart"
+  },
+  "type": {
+    "TopBannerComponent": {
+      "class": "Directive",
+      "isComponent": true,
+      "selector": "moch_personal_site-top-banner",
+      "exportAs": null,
+      "type": {
+        "class": "Type",
+        "name": "TopBannerComponent",
+        "moduleUrl": "asset:moch_personal_site/lib/components2/topBanner/topBanner.dart",
+        "prefix": null,
+        "isHost": false,
+        "value": null,
+        "diDeps": []
+      },
+      "changeDetection": 6,
+      "inputs": {},
+      "inputTypes": {},
+      "outputs": {},
+      "hostListeners": {},
+      "hostProperties": {},
+      "hostAttributes": {},
+      "lifecycleHooks": [
+        0
+      ],
+      "template": {
+        "encapsulation": 0,
+        "template": "<div class='row'>\r\n    <div class=\"col-md-12 div1\">{{Name}}</div>\r\n</div>\r\n<div class='row'>\r\n    <div class=\"col-md-12 div2\">תפריט</div>\r\n</div>",
+        "templateUrl": "asset:moch_personal_site/lib/components2/topBanner/topBanner.html",
+        "styles": [],
+        "styleUrls": [
+          "asset:moch_personal_site/lib/components2/topBanner/topBanner.css"
+        ],
+        "ngContentSelectors": []
+      },
+      "providers": [],
+      "viewProviders": [],
+      "queries": [],
+      "viewQueries": []
+    }
+  },
+  "alias": {}
+}

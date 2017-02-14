@@ -1,0 +1,26 @@
+div.componentContainer
+{
+  border: 0px;
+  margin: 5px;
+  font-size: 16px;
+  background-color: #ffffff;
+}
+
+div.div1
+{
+    height: 121px;
+    background-color: #ffffff;
+}
+div.div2
+{
+    height: 121px;
+    background-color: #D0DFE8;
+}
+
+div.div3
+{
+    text-align: center;
+    height: 111px;
+    vertical-align: middle;
+    padding-top: 10px;
+}

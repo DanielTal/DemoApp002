@@ -1,0 +1,13 @@
+{
+  "ngDeps": null,
+  "type": {
+    "AppealEssence": {
+      "class": "Identifier",
+      "name": "AppealEssence",
+      "moduleUrl": "asset:moch_personal_site/lib/models/AppealEssence.dart",
+      "prefix": null,
+      "value": null
+    }
+  },
+  "alias": {}
+}

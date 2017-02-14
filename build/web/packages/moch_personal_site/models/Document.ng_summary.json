@@ -1,0 +1,13 @@
+{
+  "ngDeps": null,
+  "type": {
+    "Document": {
+      "class": "Identifier",
+      "name": "Document",
+      "moduleUrl": "asset:moch_personal_site/lib/models/Document.dart",
+      "prefix": null,
+      "value": null
+    }
+  },
+  "alias": {}
+}

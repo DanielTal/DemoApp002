@@ -1,0 +1,13 @@
+{
+  "ngDeps": null,
+  "type": {
+    "BaseComponent": {
+      "class": "Identifier",
+      "name": "BaseComponent",
+      "moduleUrl": "asset:moch_personal_site/lib/components2/baseComponent/baseComponent.dart",
+      "prefix": null,
+      "value": null
+    }
+  },
+  "alias": {}
+}

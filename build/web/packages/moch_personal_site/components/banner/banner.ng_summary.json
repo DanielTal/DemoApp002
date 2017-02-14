@@ -1,0 +1,94 @@
+{
+  "ngDeps": {
+    "1": "",
+    "3": [
+      {
+        "1": "package:angular2/core.dart",
+        "5": false
+      },
+      {
+        "1": "package:angular2/router.dart",
+        "5": false
+      },
+      {
+        "1": "package:moch_personal_site/pages/page1/page1.dart",
+        "5": false
+      },
+      {
+        "1": "package:moch_personal_site/pages/page2/page2.dart",
+        "5": false
+      },
+      {
+        "1": "package:moch_personal_site/pages/page3/page3.dart",
+        "5": false
+      },
+      {
+        "1": "package:moch_personal_site/services/DataServices.dart",
+        "5": false
+      }
+    ],
+    "5": [
+      {
+        "1": "BannerComponent",
+        "6": [
+          "OnInit"
+        ],
+        "7": [
+          {
+            "2": "ROUTER_DIRECTIVES"
+          },
+          {
+            "2": "Page1Component"
+          },
+          {
+            "2": "Page2Component"
+          },
+          {
+            "2": "Page3Component"
+          }
+        ]
+      }
+    ],
+    "6": "banner.dart"
+  },
+  "type": {
+    "BannerComponent": {
+      "class": "Directive",
+      "isComponent": true,
+      "selector": "my-banner",
+      "exportAs": null,
+      "type": {
+        "class": "Type",
+        "name": "BannerComponent",
+        "moduleUrl": "asset:moch_personal_site/lib/components/banner/banner.dart",
+        "prefix": null,
+        "isHost": false,
+        "value": null,
+        "diDeps": []
+      },
+      "changeDetection": 6,
+      "inputs": {},
+      "inputTypes": {},
+      "outputs": {},
+      "hostListeners": {},
+      "hostProperties": {},
+      "hostAttributes": {},
+      "lifecycleHooks": [
+        0
+      ],
+      "template": {
+        "encapsulation": 2,
+        "template": "<nav class=\"navbar navbar-default navbar-fixed-top pull-right\" style=\"border-bottom:1px solid #000000\">\r\n    <div style=\"border-bottom:1px solid #000000\">\r\n        באנר\r\n    </div>\r\n    <div class=\"collapse navbar-collapse pull-right\">\r\n        <ul class=\"nav nav-pills\"> \r\n            <li role=\"presentation\">\r\n                <a [routerLink]=\"['Page3']\">פניה לועדה</a>\r\n            </li>\r\n            <li role=\"presentation\">\r\n                <a [routerLink]=\"['Page2']\">חידוש הצהרות</a>\r\n            </li>\r\n            <li role=\"presentation\">\r\n                <a [routerLink]=\"['Page1']\">תקציר תיק</a>\r\n            </li>\r\n        </ul>\r\n    </div>\r\n    <hr/>\r\n    <div style=\"border-top:1px solid #000000\">{{StatusMessage}}</div>    \r\n</nav>\r\n\r\n",
+        "templateUrl": "asset:moch_personal_site/lib/components/banner/banner.html",
+        "styles": [],
+        "styleUrls": [],
+        "ngContentSelectors": []
+      },
+      "providers": [],
+      "viewProviders": [],
+      "queries": [],
+      "viewQueries": []
+    }
+  },
+  "alias": {}
+}

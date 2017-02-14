@@ -1,0 +1,55 @@
+{
+  "ngDeps": {
+    "1": "",
+    "3": [
+      {
+        "1": "package:angular2/core.dart",
+        "5": false
+      }
+    ],
+    "5": [
+      {
+        "1": "Page2Component"
+      }
+    ],
+    "6": "page2.dart"
+  },
+  "type": {
+    "Page2Component": {
+      "class": "Directive",
+      "isComponent": true,
+      "selector": "my-page2",
+      "exportAs": null,
+      "type": {
+        "class": "Type",
+        "name": "Page2Component",
+        "moduleUrl": "asset:moch_personal_site/lib/pages/page2/page2.dart",
+        "prefix": null,
+        "isHost": false,
+        "value": null,
+        "diDeps": []
+      },
+      "changeDetection": 6,
+      "inputs": {},
+      "inputTypes": {},
+      "outputs": {},
+      "hostListeners": {},
+      "hostProperties": {},
+      "hostAttributes": {},
+      "lifecycleHooks": [],
+      "template": {
+        "encapsulation": 2,
+        "template": "<div>חידוש הצהרות</div>",
+        "templateUrl": "asset:moch_personal_site/lib/pages/page2/page2.html",
+        "styles": [],
+        "styleUrls": [],
+        "ngContentSelectors": []
+      },
+      "providers": [],
+      "viewProviders": [],
+      "queries": [],
+      "viewQueries": []
+    }
+  },
+  "alias": {}
+}

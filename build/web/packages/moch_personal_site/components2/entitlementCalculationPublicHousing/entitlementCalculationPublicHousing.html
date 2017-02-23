@@ -1,5 +1,20 @@
 <div class="row">
-    <div class="col-md-9 div1">פרטי זכאות</div>
+    <div class="col-md-9 div1">
+        <div class="row">
+            <div class="col-md-4 col-xs-4">
+                <div>מיקום בתור</div>
+                <div>{{model?.QueueNumber}}</div>
+            </div>
+            <div class="col-md-4 col-xs-4">
+                <div>נתוני התור</div>
+                <div>{{model?.QueueDetails}}</div>
+            </div>
+            <div class="col-md-4 col-xs-4">
+                <div>סוג הדיור</div>
+                <div>{{model?.TypeName}}</div>
+            </div>
+        </div>
+    </div>
     <div class="col-md-3 div2 nopadding">
         <div class="div3">.</div>
         <div class="div4">

@@ -1,5 +1,28 @@
 <div class="row">
-    <div class="col-md-9 div1">פרטי זכאות</div>
+    <div class="col-md-9 div1">
+        <div class="row">
+            <div class="col-md-3 col-xs-3">
+                <div>ישובי בן מקום</div>
+                <div>{{model?.Settlements}}</div>
+            </div>
+            <div class="col-md-3 col-xs-3">
+                <div>תאריך תוקף הזכאות</div>
+                <div>{{model?.ExpirationDate}}</div>
+            </div>
+            <div class="col-md-2 col-xs-2">
+                <div>חסר דיור או משפר דיור</div>
+                <div>{{model?.StatusName}}</div>
+            </div>
+            <div class="col-md-2 col-xs-2">
+                <div>זכאי למחיר למשתכן</div>
+                <div>{{model?.EntitlementForPricing}}</div>
+            </div>
+            <div class="col-md-2 col-xs-2">
+                <div>זכאי למחיר מטרה</div>
+                <div>{{model?.EntitlementForTargetPrice}}</div>
+            </div>
+        </div>
+    </div>
     <div class="col-md-3 div2 nopadding">
         <div class="div3">.</div>
         <div class="div4">

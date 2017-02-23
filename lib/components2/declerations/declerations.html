@@ -9,20 +9,16 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td class="col1">01/02/2017</td>
-                <td class="col1">סוג הצהרה</td>
-                <td class="col1">הצהרת הפונה</td>
-            </tr>
-            <tr>
-                <td class="col1">01/02/2017</td>
-                <td class="col1">סוג הצהרה</td>
-                <td class="col1">הצהרת הפונה</td>
-            </tr>
-            <tr>
-                <td class="col1">01/02/2017</td>
-                <td class="col1">סוג הצהרה</td>
-                <td class="col1">הצהרת הפונה</td>
+            <tr *ngFor="let model of models">
+                <td class="col1">
+                    <span>{{model?.DeclarationDate}}</span>
+                </td>
+                <td class="col1">
+                    <span>{{model?.DeclarationCategoryDescription}}</span>
+                </td>
+                <td class="col1">
+                    <span>{{model?.DeclarationType}}</span>
+                </td>
             </tr>
         </tbody>
     </table>    

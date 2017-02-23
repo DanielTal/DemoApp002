@@ -36,6 +36,7 @@ class AssistanceFileComponent implements OnInit
       if(assistanceFileMap != null)
       {
         this.model = new AssistanceFile(assistanceFileMap);
+        _dataServices.SendMessage('SearchBar::Go', this.model.Id.toString() , MessageType.Info, EventType.AssistanceFileChanhed);
       }
     }
   }

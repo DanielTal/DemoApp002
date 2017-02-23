@@ -23,9 +23,5 @@ class LastPaymentComponent implements OnInit
 
   void OnData(Message m)
   {
-    print('LastPaymentComponent::OnData m = ${m.EventArg1}');
-    print('LastPaymentComponent::OnData m = ${m.eventType}');
-    print('LastPaymentComponent::OnData m = ${m.MessageText}');
-    print('LastPaymentComponent::OnData m = ${m.messageType}');
   }  
 }

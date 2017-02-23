@@ -9,6 +9,14 @@
       {
         "1": "package:moch_personal_site/services/DataServices.dart",
         "5": false
+      },
+      {
+        "1": "package:moch_personal_site/models/Declaration.dart",
+        "5": false
+      },
+      {
+        "1": "dart:async",
+        "5": false
       }
     ],
     "5": [
@@ -75,7 +83,7 @@
       ],
       "template": {
         "encapsulation": 0,
-        "template": "<h3>{{Name}}</h3>\r\n<div class=\"div1\" dir=\"ltr\">\r\n    <table class=\"table table-striped\">\r\n        <thead>\r\n            <tr>\r\n                <th class=\"header1\">תאריך</th>\r\n                <th class=\"header1\">סוג הצהרה</th>\r\n                <th class=\"header1\">הצהרת הפונה</th>\r\n            </tr>\r\n        </thead>\r\n        <tbody>\r\n            <tr>\r\n                <td class=\"col1\">01/02/2017</td>\r\n                <td class=\"col1\">סוג הצהרה</td>\r\n                <td class=\"col1\">הצהרת הפונה</td>\r\n            </tr>\r\n            <tr>\r\n                <td class=\"col1\">01/02/2017</td>\r\n                <td class=\"col1\">סוג הצהרה</td>\r\n                <td class=\"col1\">הצהרת הפונה</td>\r\n            </tr>\r\n            <tr>\r\n                <td class=\"col1\">01/02/2017</td>\r\n                <td class=\"col1\">סוג הצהרה</td>\r\n                <td class=\"col1\">הצהרת הפונה</td>\r\n            </tr>\r\n        </tbody>\r\n    </table>    \r\n</div>",
+        "template": "<h3>{{Name}}</h3>\r\n<div class=\"div1\" dir=\"ltr\">\r\n    <table class=\"table table-striped\">\r\n        <thead>\r\n            <tr>\r\n                <th class=\"header1\">תאריך</th>\r\n                <th class=\"header1\">סוג הצהרה</th>\r\n                <th class=\"header1\">הצהרת הפונה</th>\r\n            </tr>\r\n        </thead>\r\n        <tbody>\r\n            <tr *ngFor=\"let model of models\">\r\n                <td class=\"col1\">\r\n                    <span>{{model?.DeclarationDate}}</span>\r\n                </td>\r\n                <td class=\"col1\">\r\n                    <span>{{model?.DeclarationCategoryDescription}}</span>\r\n                </td>\r\n                <td class=\"col1\">\r\n                    <span>{{model?.DeclarationType}}</span>\r\n                </td>\r\n            </tr>\r\n        </tbody>\r\n    </table>    \r\n</div>",
         "templateUrl": "asset:moch_personal_site/lib/components2/declerations/declerations.html",
         "styles": [],
         "styleUrls": [

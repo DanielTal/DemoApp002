@@ -1,5 +1,7 @@
 import 'package:angular2/core.dart';
 import 'package:moch_personal_site/services/DataServices.dart';
+import 'package:moch_personal_site/models/Declaration.dart';
+import 'dart:async';
 
 @Component
 (
@@ -12,6 +14,8 @@ class DeclerationsComponent implements OnInit
 {
   String Name;
   DataServices _dataServices;
+  List<Declaration> models;
+  bool isBusy = false;
   
   DeclerationsComponent(DataServices this._dataServices)
   {
@@ -23,11 +27,25 @@ class DeclerationsComponent implements OnInit
     DataServices.eventBus.on(Message).listen(OnData);
   }
 
-  void OnData(Message m)
+  Future OnData(Message m) async
   {
-    if(m.eventType == EventType.IdentityNumberChanged)
+    switch(m.eventType)
     {
-      _dataServices.getAssistanceFileDeclaration(m.EventArg1);
+      case EventType.AssistanceFileChanhed:
+        var responseMap = await _dataServices.getAssistanceFileDeclaration(m.EventArg1);
+        models = responseMap['models'].map((x) => new Declaration(x)).toList();
+        isBusy = false;
+        break;
+      case EventType.IdentityNumberChanged:
+        isBusy = true;
+        if(models != null)
+        {
+          models.clear();
+          models = null;
+        }
+        break;
+      default:
+        break;
     }
   }
 }

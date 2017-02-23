@@ -23,9 +23,5 @@ class PaymentFramesComponent implements OnInit
 
   void OnData(Message m)
   {
-    print('PaymentFramesComponent::OnData m = ${m.EventArg1}');
-    print('PaymentFramesComponent::OnData m = ${m.eventType}');
-    print('PaymentFramesComponent::OnData m = ${m.MessageText}');
-    print('PaymentFramesComponent::OnData m = ${m.messageType}');
   }
 }

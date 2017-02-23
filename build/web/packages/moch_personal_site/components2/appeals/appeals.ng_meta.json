@@ -9,11 +9,29 @@
       {
         "1": "package:moch_personal_site/services/DataServices.dart",
         "5": false
+      },
+      {
+        "1": "package:moch_personal_site/models/Appeals.dart",
+        "5": false
+      },
+      {
+        "1": "dart:async",
+        "5": false
+      },
+      {
+        "1": "package:intl/intl.dart",
+        "5": false
       }
     ],
     "5": [
       {
         "1": "AppealsComponent",
+        "5": [
+          {
+            "1": "DataServices",
+            "4": "_dataServices"
+          }
+        ],
         "6": [
           "OnInit"
         ]
@@ -28,6 +46,10 @@
       {
         "1": "package:moch_personal_site/services/DataServices.template.dart",
         "4": "i1"
+      },
+      {
+        "1": "package:moch_personal_site/models/Appeals.template.dart",
+        "4": "i2"
       }
     ]
   },
@@ -44,7 +66,28 @@
         "prefix": null,
         "isHost": false,
         "value": null,
-        "diDeps": []
+        "diDeps": [
+          {
+            "token": {
+              "value": null,
+              "identifier": {
+                "class": "Identifier",
+                "name": "DataServices",
+                "moduleUrl": "asset:moch_personal_site/lib/services/DataServices.dart",
+                "prefix": null,
+                "value": null
+              },
+              "identifierIsInstance": false
+            },
+            "value": null,
+            "isAttribute": false,
+            "isSelf": false,
+            "isHost": false,
+            "isSkipSelf": false,
+            "isOptional": false,
+            "isValue": false
+          }
+        ]
       },
       "changeDetection": 6,
       "inputs": {},
@@ -58,7 +101,7 @@
       ],
       "template": {
         "encapsulation": 0,
-        "template": "<div>\r\n    <h3>{{Name}}</h3>\r\n    <div class=\"row row1\">\r\n        <div class=\"md-col-3 col-xs-3\">\r\n            <span class='col1'>תאריך פניה</span>\r\n            <span class=\"col2\">12/03/2016</span>\r\n        </div>\r\n        <div class=\"md-col-3 col-xs-3\">\r\n            <span class=\"col1\">סטטוס פניה</span>\r\n            <span class=\"col2\">התקבלו החלטות וועדה</span>\r\n        </div>\r\n        <div class=\"md-col-3 col-xs-3\">\r\n            <span class=\"col1\">צפי תאריך דיון בוועדה</span>\r\n            <span class=\"col2\">17/02/2016</span>\r\n        </div>\r\n        <div class=\"md-col-3 col-xs-3\">\r\n            <span class=\"col1\">תאריך קבלת החלטה</span>\r\n            <span class=\"col2\">19/02/2016</span>\r\n        </div>\r\n    </div>\r\n    <div class=\"row row1\">\r\n        <div class=\"md-col-3 col-xs-3\">\r\n            <span class='col1'>תאריך פניה</span>\r\n            <span class=\"col2\">12/03/2016</span>\r\n        </div>\r\n        <div class=\"md-col-3 col-xs-3\">\r\n            <span class=\"col1\">סטטוס פניה</span>\r\n            <span class=\"col2\">התקבלו החלטות וועדה</span>\r\n        </div>\r\n        <div class=\"md-col-3 col-xs-3\">\r\n            <span class=\"col1\">צפי תאריך דיון בוועדה</span>\r\n            <span class=\"col2\">17/02/2016</span>\r\n        </div>\r\n        <div class=\"md-col-3 col-xs-3\">\r\n            <span class=\"col1\">תאריך קבלת החלטה</span>\r\n            <span class=\"col2\">19/02/2016</span>\r\n        </div>\r\n    </div>\r\n    <div class=\"row row1\">\r\n        <div class=\"md-col-3 col-xs-3\">\r\n            <span class='col1'>תאריך פניה</span>\r\n            <span class=\"col2\">12/03/2016</span>\r\n        </div>\r\n        <div class=\"md-col-3 col-xs-3\">\r\n            <span class=\"col1\">סטטוס פניה</span>\r\n            <span class=\"col2\">התקבלו החלטות וועדה</span>\r\n        </div>\r\n        <div class=\"md-col-3 col-xs-3\">\r\n            <span class=\"col1\">צפי תאריך דיון בוועדה</span>\r\n            <span class=\"col2\">17/02/2016</span>\r\n        </div>\r\n        <div class=\"md-col-3 col-xs-3\">\r\n            <span class=\"col1\">תאריך קבלת החלטה</span>\r\n            <span class=\"col2\">19/02/2016</span>\r\n        </div>\r\n    </div>\r\n    \r\n</div>",
+        "template": "<div class=\"panel-group\" id=\"accordion\" role=\"tablist\" aria-multiselectable=\"true\">\r\n  \r\n  <h3>{{Name}}</h3>\r\n  <div *ngIf=\"isBusy\" style=\"display:block; position: relative; margin:auto\">\r\n    <img src=\"web3/images/spinner.gif\"/>\r\n  </div>\r\n  <div class=\"panel panel-default\" *ngFor=\"let model of models\">\r\n    <div class=\"panel-heading\" role=\"tab\" id=\"{{GetHeading(model)}}\">\r\n      <h4 class=\"panel-title\">\r\n        <a class=\"collapsed\" role=\"button\" data-toggle=\"collapse\" data-parent=\"#accordion\" href=\"{{GetIDRef(model)}}\" aria-expanded=\"false\" [attr.aria-controls]=\"GetHeading(model)\">\r\n          <div class=\"row\">\r\n              <div class=\"md-col-3 col-xs-3\">\r\n                  <div>תאריך קבלת החלטה</div>\r\n                  <div>{{MyDateFormat(model?.ResolutionDate)}}</div>\r\n              </div>\r\n              <div class=\"md-col-3 col-xs-3\">\r\n                  <div>צפי תאריך דיון בוועדה</div>\r\n                  <div>{{MyDateFormat(model?.EstimatedDiscussionDate)}}</div>\r\n              </div>\r\n              <div class=\"md-col-3 col-xs-3\">\r\n                  <div>סטטוס פניה</div>\r\n                  <div>{{model?.StatusWithCalculatedEntitlement}}</div>\r\n              </div>\r\n              <div class=\"md-col-3 col-xs-3\">\r\n                  <div>תאריך פניה</div>\r\n                  <div>{{MyDateFormat(model.AppealDate)}}</div>\r\n              </div>\r\n          </div>\r\n        </a>\r\n      </h4>\r\n    </div>\r\n    <div id=\"{{GetID(model)}}\" class=\"panel-collapse collapse\" role=\"tabpanel\" [attr.aria-labelledby]=\"GetHeading(model)\">\r\n      <div class=\"panel-body\">\r\n        <span>MODEL</span>\r\n        <span>{{model?.Id}}</span>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>",
         "templateUrl": "asset:moch_personal_site/lib/components2/appeals/appeals.html",
         "styles": [],
         "styleUrls": [

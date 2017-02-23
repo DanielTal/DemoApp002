@@ -1,5 +1,8 @@
 import 'package:angular2/core.dart';
 import 'package:moch_personal_site/services/DataServices.dart';
+import 'package:moch_personal_site/models/Appeals.dart';
+import 'dart:async';
+import 'package:intl/intl.dart';
 
 @Component
 (
@@ -11,7 +14,10 @@ import 'package:moch_personal_site/services/DataServices.dart';
 class AppealsComponent implements OnInit
 {
   String Name;
-  AppealsComponent()
+  DataServices _dataServices;
+  List<Appeal> models;
+  bool isBusy = false;
+  AppealsComponent(DataServices this._dataServices)
   {
   }
 
@@ -21,11 +27,61 @@ class AppealsComponent implements OnInit
     DataServices.eventBus.on(Message).listen(OnData);
   }
 
-  void OnData(Message m)
+  String GetID(Appeal model)
   {
-    print('AppealsComponent::OnData m = ${m.EventArg1}');
-    print('AppealsComponent::OnData m = ${m.eventType}');
-    print('AppealsComponent::OnData m = ${m.MessageText}');
-    print('AppealsComponent::OnData m = ${m.messageType}');
+    return 'AppealItem${model.Id}';
+  }
+  String GetIDRef(Appeal model)
+  {
+    return '#${GetID(model)}';
+  }
+  String GetHeading(Appeal model)
+  {
+    return "AppealHeading${model.Id}";
+  }
+
+  String MyDateFormat(dateValue)
+  {
+    String s1 = '';
+    try
+    {
+        if(dateValue is DateTime)
+        {
+          var x1 = new DateFormat('dd/MM/yyyy');
+          s1 = x1.format(dateValue);
+        }
+        else
+        {
+          print('type ${dateValue.runtimeType}');
+          print('value ${dateValue}');
+        }
+    }
+    catch(e)
+    {
+      print('exception ${e}');
+    }
+    return s1;
+  }
+
+  Future OnData(Message m) async
+  {
+    switch(m.eventType)
+    {
+      case  EventType.AssistanceFileChanhed:
+        var responseMap = await _dataServices.getAssistanceFileAppeals(m.EventArg1);
+        models = responseMap['models'].map((x) => new Appeal(x)).toList();
+        isBusy = false;
+        break;
+      case EventType.IdentityNumberChanged:
+        isBusy = true;
+        if(models != null)
+        {
+          models.clear();
+          models = null;
+        }
+        break;
+      default:
+        break;
+    }
   }
 }

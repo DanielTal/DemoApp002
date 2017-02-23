@@ -28,15 +28,9 @@ class EntitlementCalculationRentComponent implements OnInit
 
   Future OnData(Message m) async
   {
-    if(m.eventType == EventType.IdentityNumberChanged)
+    if(m.eventType == EventType.AssistanceFileChanhed)
     {
-      model = null;
-      var responseMap = await _dataServices.getAssistanceFileEntitlementCalculationRent(m.EventArg1);
-      var modelMap = responseMap["model"];
-      if(modelMap != null)
-      {
-        this.model = new EntitlementCalculationRent(modelMap);
-      }
+      _dataServices.getAssistanceFileEntitlements(m.EventArg1);
     }
   }
 }

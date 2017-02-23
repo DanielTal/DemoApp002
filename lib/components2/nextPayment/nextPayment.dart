@@ -23,9 +23,5 @@ class NextPaymentComponent implements OnInit
 
   void OnData(Message m)
   {
-    print('NextPaymentComponent::OnData m = ${m.EventArg1}');
-    print('NextPaymentComponent::OnData m = ${m.eventType}');
-    print('NextPaymentComponent::OnData m = ${m.MessageText}');
-    print('NextPaymentComponent::OnData m = ${m.messageType}');
   }
 }

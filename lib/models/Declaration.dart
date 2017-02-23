@@ -1,11 +1,12 @@
 class Declaration
 {
-  DateTime Date;
-  String TypeDescription;
-  String IsApplicantAppeal;
-  
+  DateTime DeclarationDate;
+  String DeclarationType;
+  String DeclarationCategoryDescription;
+
   Declaration(jsonMap)
   {
-
+    DeclarationType = jsonMap['DeclarationType'];
+    DeclarationCategoryDescription  = jsonMap['DeclarationCategoryDescription'];
   }
 }

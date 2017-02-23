@@ -15,7 +15,8 @@ enum MessageType
 
 enum EventType
 {
-  IdentityNumberChanged
+  IdentityNumberChanged, 
+  AssistanceFileChanhed,
 }
 
 class Message
@@ -73,20 +74,26 @@ class DataServices
     return responseMap;
   }
 
+  Future<dynamic> getAssistanceFileAppeals(String Id) async
+  {
+    final response = await _http.get('/Services/api/values/PSGetAppeals?assistanceFileId=${Id}');
+    var responseMap = JSON.decode(response.body);
+    return responseMap;
+  }
+
+  Future<dynamic> getAssistanceFileDeclaration(String Id) async
+  {
+    final response = await _http.get('/Services/api/values/PSGetDeclarations?assistanceFileId=${Id}');
+    var responseMap = JSON.decode(response.body);
+    return responseMap;
+  }
+
   Future<dynamic> getAssistanceFileDocuments(String tz) async
   {
     print("getAssistanceFileDocuments");
   }
 
-  Future<dynamic> getAssistanceFileDeclaration(String tz) async
-  {
-    print("getAssistanceFileDeclaration");
-  }
 
-  Future<dynamic> getAssistanceFileAppeals(String tz) async
-  {
-    print("getAssistanceFileAppeals");
-  }
   
   Future<dynamic> getAssistanceFilePaymentFrames(String tz) async
   {
@@ -100,18 +107,29 @@ class DataServices
   
   Future<dynamic> getAssistanceFileEntitlementCalculationPrice(String tz) async
   {
-    print("getAssistanceFileEntitlementCalculationPrice");
+    // final response = await _http.get('/Services/api/values/GetEntitlementCalculationPrice?identityNumber=${tz}');
+    // var responseMap = JSON.decode(response.body);
+    // return responseMap;
   }
 
   Future<dynamic> getAssistanceFileEntitlementCalculationPublicHousing(String tz) async
   {
-    print("getAssistanceFileEntitlementCalculationPublicHousing");
+    // final response = await _http.get('/Services/api/values/GetEntitlementCalculationPublicHousing?identityNumber=${tz}');
+    // var responseMap = JSON.decode(response.body);
+    // return responseMap;
   }
   
   Future<dynamic> getAssistanceFileEntitlementCalculationRent(String tz) async
   {
-    final response = await _http.get('/Services/api/values/GetEntitlementCalculationRent?identityNumber=${tz}');
-    var responseMap = JSON.decode(response.body);
-    return responseMap;
+    // final response = await _http.get('/Services/api/values/GetEntitlementCalculationRent?identityNumber=${tz}');
+    // var responseMap = JSON.decode(response.body);
+    // return responseMap;
+  }
+
+  Future<dynamic> getAssistanceFileEntitlements(String tz) async
+  {
+    // final response = await _http.get('/Services/api/values/GetWebLastEntitlementCalculation?assistanceFileId=${tz}');
+    // var responseMap = JSON.decode(response.body);
+    // return responseMap;
   }
 }

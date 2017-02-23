@@ -1,58 +1,39 @@
-<div>
-    <h3>{{Name}}</h3>
-    <div class="row row1">
-        <div class="md-col-3 col-xs-3">
-            <span class='col1'>תאריך פניה</span>
-            <span class="col2">12/03/2016</span>
-        </div>
-        <div class="md-col-3 col-xs-3">
-            <span class="col1">סטטוס פניה</span>
-            <span class="col2">התקבלו החלטות וועדה</span>
-        </div>
-        <div class="md-col-3 col-xs-3">
-            <span class="col1">צפי תאריך דיון בוועדה</span>
-            <span class="col2">17/02/2016</span>
-        </div>
-        <div class="md-col-3 col-xs-3">
-            <span class="col1">תאריך קבלת החלטה</span>
-            <span class="col2">19/02/2016</span>
-        </div>
+<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+  
+  <h3>{{Name}}</h3>
+  <div *ngIf="isBusy" style="display:block; position: relative; margin:auto">
+    <img src="web3/images/spinner.gif"/>
+  </div>
+  <div class="panel panel-default" *ngFor="let model of models">
+    <div class="panel-heading" role="tab" id="{{GetHeading(model)}}">
+      <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="{{GetIDRef(model)}}" aria-expanded="false" [attr.aria-controls]="GetHeading(model)">
+          <div class="row">
+              <div class="md-col-3 col-xs-3">
+                  <div>תאריך קבלת החלטה</div>
+                  <div>{{MyDateFormat(model?.ResolutionDate)}}</div>
+              </div>
+              <div class="md-col-3 col-xs-3">
+                  <div>צפי תאריך דיון בוועדה</div>
+                  <div>{{MyDateFormat(model?.EstimatedDiscussionDate)}}</div>
+              </div>
+              <div class="md-col-3 col-xs-3">
+                  <div>סטטוס פניה</div>
+                  <div>{{model?.StatusWithCalculatedEntitlement}}</div>
+              </div>
+              <div class="md-col-3 col-xs-3">
+                  <div>תאריך פניה</div>
+                  <div>{{MyDateFormat(model.AppealDate)}}</div>
+              </div>
+          </div>
+        </a>
+      </h4>
     </div>
-    <div class="row row1">
-        <div class="md-col-3 col-xs-3">
-            <span class='col1'>תאריך פניה</span>
-            <span class="col2">12/03/2016</span>
-        </div>
-        <div class="md-col-3 col-xs-3">
-            <span class="col1">סטטוס פניה</span>
-            <span class="col2">התקבלו החלטות וועדה</span>
-        </div>
-        <div class="md-col-3 col-xs-3">
-            <span class="col1">צפי תאריך דיון בוועדה</span>
-            <span class="col2">17/02/2016</span>
-        </div>
-        <div class="md-col-3 col-xs-3">
-            <span class="col1">תאריך קבלת החלטה</span>
-            <span class="col2">19/02/2016</span>
-        </div>
+    <div id="{{GetID(model)}}" class="panel-collapse collapse" role="tabpanel" [attr.aria-labelledby]="GetHeading(model)">
+      <div class="panel-body">
+        <span>MODEL</span>
+        <span>{{model?.Id}}</span>
+      </div>
     </div>
-    <div class="row row1">
-        <div class="md-col-3 col-xs-3">
-            <span class='col1'>תאריך פניה</span>
-            <span class="col2">12/03/2016</span>
-        </div>
-        <div class="md-col-3 col-xs-3">
-            <span class="col1">סטטוס פניה</span>
-            <span class="col2">התקבלו החלטות וועדה</span>
-        </div>
-        <div class="md-col-3 col-xs-3">
-            <span class="col1">צפי תאריך דיון בוועדה</span>
-            <span class="col2">17/02/2016</span>
-        </div>
-        <div class="md-col-3 col-xs-3">
-            <span class="col1">תאריך קבלת החלטה</span>
-            <span class="col2">19/02/2016</span>
-        </div>
-    </div>
-    
+  </div>
 </div>

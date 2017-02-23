@@ -28,13 +28,9 @@ class DocumentsComponent implements OnInit, OnChanges
 
   void OnData(Message m)
   {
-    print('Document::OnData m = ${m.EventArg1}');
-    print('Document::OnData m = ${m.eventType}');
-    print('Document::OnData m = ${m.MessageText}');
-    print('Document::OnData m = ${m.messageType}');
   }
   Future ngOnChanges(Map<String, SimpleChange> changes) async
   {
-    print("Documents:ngOnChanges ${changes}");
+
   }
 }

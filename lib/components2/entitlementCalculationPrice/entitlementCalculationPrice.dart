@@ -1,5 +1,7 @@
 import 'package:angular2/core.dart';
 import 'package:moch_personal_site/services/DataServices.dart';
+import 'dart:async';
+import 'package:moch_personal_site/models/EntitlementCalculationPrice.dart';
 
 @Component
 (
@@ -11,7 +13,10 @@ import 'package:moch_personal_site/services/DataServices.dart';
 class EntitlementCalculationPriceComponent implements OnInit
 {
   String Name;
-  EntitlementCalculationPriceComponent()
+  EntitlementCalculationPrice model;
+  DataServices _dataServices;
+  
+  EntitlementCalculationPriceComponent(DataServices this._dataServices)
   {
   }
 
@@ -21,11 +26,11 @@ class EntitlementCalculationPriceComponent implements OnInit
     DataServices.eventBus.on(Message).listen(OnData);
   }
 
-  void OnData(Message m)
+  Future OnData(Message m) async
   {
-    print('EntitlementCalculationPriceComponent::OnData m = ${m.EventArg1}');
-    print('EntitlementCalculationPriceComponent::OnData m = ${m.eventType}');
-    print('EntitlementCalculationPriceComponent::OnData m = ${m.MessageText}');
-    print('EntitlementCalculationPriceComponent::OnData m = ${m.messageType}');
+    if(m.eventType == EventType.AssistanceFileChanhed)
+    {
+      //_dataServices.getAssistanceFileEntitlements(m.EventArg1);
+    }
   }  
 }

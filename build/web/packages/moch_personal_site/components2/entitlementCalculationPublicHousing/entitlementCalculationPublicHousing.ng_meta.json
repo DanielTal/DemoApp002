@@ -9,11 +9,25 @@
       {
         "1": "package:moch_personal_site/services/DataServices.dart",
         "5": false
+      },
+      {
+        "1": "package:moch_personal_site/models/EntitlementCalculationPublicHousing.dart",
+        "5": false
+      },
+      {
+        "1": "dart:async",
+        "5": false
       }
     ],
     "5": [
       {
         "1": "EntitlementCalculationPublicHousingComponent",
+        "5": [
+          {
+            "1": "DataServices",
+            "4": "_dataServices"
+          }
+        ],
         "6": [
           "OnInit"
         ]
@@ -28,6 +42,10 @@
       {
         "1": "package:moch_personal_site/services/DataServices.template.dart",
         "4": "i1"
+      },
+      {
+        "1": "package:moch_personal_site/models/EntitlementCalculationPublicHousing.template.dart",
+        "4": "i2"
       }
     ]
   },
@@ -44,7 +62,28 @@
         "prefix": null,
         "isHost": false,
         "value": null,
-        "diDeps": []
+        "diDeps": [
+          {
+            "token": {
+              "value": null,
+              "identifier": {
+                "class": "Identifier",
+                "name": "DataServices",
+                "moduleUrl": "asset:moch_personal_site/lib/services/DataServices.dart",
+                "prefix": null,
+                "value": null
+              },
+              "identifierIsInstance": false
+            },
+            "value": null,
+            "isAttribute": false,
+            "isSelf": false,
+            "isHost": false,
+            "isSkipSelf": false,
+            "isOptional": false,
+            "isValue": false
+          }
+        ]
       },
       "changeDetection": 6,
       "inputs": {},
@@ -58,7 +97,7 @@
       ],
       "template": {
         "encapsulation": 0,
-        "template": "<div class=\"row\">\r\n    <div class=\"col-md-9 div1\">פרטי זכאות</div>\r\n    <div class=\"col-md-3 div2 nopadding\">\r\n        <div class=\"div3\">.</div>\r\n        <div class=\"div4\">\r\n            <h3>{{Name}}</h3>\r\n        </div>\r\n    </div>\r\n</div>",
+        "template": "<div class=\"row\">\r\n    <div class=\"col-md-9 div1\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-4 col-xs-4\">\r\n                <div>מיקום בתור</div>\r\n                <div>{{model?.QueueNumber}}</div>\r\n            </div>\r\n            <div class=\"col-md-4 col-xs-4\">\r\n                <div>נתוני התור</div>\r\n                <div>{{model?.QueueDetails}}</div>\r\n            </div>\r\n            <div class=\"col-md-4 col-xs-4\">\r\n                <div>סוג הדיור</div>\r\n                <div>{{model?.TypeName}}</div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n    <div class=\"col-md-3 div2 nopadding\">\r\n        <div class=\"div3\">.</div>\r\n        <div class=\"div4\">\r\n            <h3>{{Name}}</h3>\r\n        </div>\r\n    </div>\r\n</div>",
         "templateUrl": "asset:moch_personal_site/lib/components2/entitlementCalculationPublicHousing/entitlementCalculationPublicHousing.html",
         "styles": [],
         "styleUrls": [
